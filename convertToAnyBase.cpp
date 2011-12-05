@@ -34,7 +34,7 @@ inline double abs(double n) {
 }
 
 void ZecimalToK(register int nr, int bazaFinala) {
-        const string numerele("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ");//pina in baza 36
+        const string numerele("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"); //pana in baza 36
         bool is_neg = nr < 0;
         string rezultatul;
 
@@ -57,14 +57,9 @@ int main(void) {
     cin >> Numarul;
     Conversie(Numarul, 10, 2);
     //Conversie(Numarul, [baza in care e numarul initial], [baza in care tre transformat])
-
-
-    getwchar();
-    /*folosesc 2 de astea pentru ca la prima se umple asa zisul Buffer cu
-    textul returnat la ecran(in caz ca te intreaba)*/
-
-    getwchar();//functie ce face parte din iostream.h
-    //am inlocuit _getch() cu astea pentru ca sa poti compila programul si pe alte sisteme de operare
+    
+    cin.get();
+    cin.get();
 
     return 0;
 }
