@@ -28,7 +28,7 @@ int kToZecimal(char n[], short bazaInitiala) {
 }
 
 inline double abs(double n) {
-    if(n<0) return n*(-1);
+    if(n < 0) return n * (-1);
     else
     return n;
 }
