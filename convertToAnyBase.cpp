@@ -5,39 +5,36 @@ using namespace std;
 
 unsigned short L;
 
-unsigned short lungime(char c[])
-{
-    register unsigned short i=0;
-    while(c[++i]!=0) {}
+unsigned short lungime(char c[]) {
+    register unsigned short i = 0;
+    while(c[++i] != 0) ;
     return i;
 }
 
 int kToZecimal(char n[], short bazaInitiala)
 {
-    register short i=0;
-    int s=0;
+    register short i = 0;
+    int s = 0;
 	
-	L=lungime(n);
+	L = lungime(n);
 
-    while(n[i]!=0) {
-        if(n[i]<='9')
-            s=s+((int)n[i]-48)*pow(bazaInitiala, L-1-i);
+    while(n[i] != 0) {
+        if(n[i] <= '9')
+            s = s + ((int)n[i] - 48) * pow(bazaInitiala, L - 1 - i);
         else
-            s=s+((int)n[i]-87)*pow(bazaInitiala, L-1-i);
+            s = s+((int)n[i] - 87) * pow(bazaInitiala, L - 1 - i);
         i++;
     }
     return s;
 }
 
-inline double abs(double n)
-{
+inline double abs(double n) {
     if(n<0) return n*(-1);
     else
     return n;
 }
 
-void ZecimalToK(register int nr, int bazaFinala)
-{
+void ZecimalToK(register int nr, int bazaFinala) {
         const string numerele("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ");//pina in baza 36
         bool is_neg = nr < 0;
         string rezultatul;
@@ -60,7 +57,7 @@ inline void Conversie(char nr[], int bazaInitiala, int bazaFinala)
 int main(void)
 {
     char Numarul[100];
-    cin>>Numarul;
+    cin >> Numarul;
     Conversie(Numarul, 10, 2);
     //Conversie(Numarul, [baza in care e numarul initial], [baza in care tre transformat])
 
