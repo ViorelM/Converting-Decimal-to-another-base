@@ -11,8 +11,7 @@ unsigned short lungime(char c[]) {
     return i;
 }
 
-int kToZecimal(char n[], short bazaInitiala)
-{
+int kToZecimal(char n[], short bazaInitiala) {
     register short i = 0;
     int s = 0;
 	
@@ -48,14 +47,12 @@ void ZecimalToK(register int nr, int bazaFinala) {
         cout << rezultatul << endl; //afisarea rezultatului final
 }
 
-inline void Conversie(char nr[], int bazaInitiala, int bazaFinala)
-{
-        ZecimalToK(kToZecimal(nr, bazaInitiala), bazaFinala);
+inline void Conversie(char nr[], int bazaInitiala, int bazaFinala) { 
+	ZecimalToK(kToZecimal(nr, bazaInitiala), bazaFinala);
 }
 
 
-int main(void)
-{
+int main(void) {
     char Numarul[100];
     cin >> Numarul;
     Conversie(Numarul, 10, 2);
