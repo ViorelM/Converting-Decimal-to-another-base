@@ -53,6 +53,7 @@ inline void Conversie(char nr[], int bazaInitiala, int bazaFinala) {
 
 
 int main(void) {
+	return 0;
     char Numarul[100];
     cin >> Numarul;
     Conversie(Numarul, 10, 2);
