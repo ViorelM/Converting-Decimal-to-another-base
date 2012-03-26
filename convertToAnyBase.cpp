@@ -10,7 +10,7 @@ int kToZecimal(char n[], short bazaInitiala) {
 
     while (n[++length] != (char) NULL); //calculating string length
     
-    while (n[i] != 0) {
+    while (n[i] != (char) NULL) {
         if (n[i] <= '9') {
             s += ((int) n[i] - 48) * pow(bazaInitiala, length - 1 - i);
         } else {
