@@ -57,9 +57,5 @@ int main(void) {
     cin >> Numarul;
     Conversie(Numarul, 10, 2);
     //Conversie(Numarul, [baza in care e numarul initial], [baza in care tre transformat])
-    
-    cin.get();
-    cin.get();
-
     return 0;
 }
