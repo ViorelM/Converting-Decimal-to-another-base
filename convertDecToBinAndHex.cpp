@@ -3,12 +3,12 @@
 using namespace std;
 
 void convertToBits(int nr) {
-    int mask = 1 << (sizeof(int)*8-1);
+    int mask = 1 << (sizeof(int) * 8 - 1);
     cout << "The binary representation of the number " << nr << ": ";
-    for(register unsigned int i = 1; i <= sizeof(int)*8; i++) {
+    for (register unsigned int i = 1; i <= sizeof(int) * 8; i++) {
         cout << (((nr & mask) == 0) ? "0" : "1");
         nr <<= 1;
-        if(i%8 == 0) cout << " ";
+        if (i % 8 == 0) cout << " ";
     }
     cout << endl;
 }
